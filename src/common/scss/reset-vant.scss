@@ -1,0 +1,136 @@
+.van-popup--right{ //室内地图右侧划出
+  width: 100%;
+  height: 100%;
+}
+.van-tabbar-item--active {
+  color: $theme
+}
+
+.van-tabbar {
+  background: hsla(0, 0%, 100%, .98);
+}
+
+.van-nav-bar .van-icon, .van-nav-bar__text {
+  color: $text-color !important;
+}
+
+//去除点击返回的阴影
+.van-nav-bar__text:active {
+  background-color: inherit!important;
+}
+
+.van-search__action {
+  padding-right: 7px;
+  padding-left: 7px;
+}
+
+//重置多谢框label,扩大点击范围
+//重置复选框样式
+.van-checkbox {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.van-checkbox__label, .van-radio__label {
+  padding: 5px 0;
+  min-width: 50vw;
+}
+
+.operation-list  .van-cell {
+  > .van-icon-add, > .van-icon-setting {
+    font-size: 23px;
+    margin-right: 12px;
+  }
+}
+
+//.van-search .van-cell{
+//  margin-right: 8px;
+//}
+//.van-toast--unclickable .van-toast{
+//  background-color: rgba(0,0,0,0);
+//}
+
+//百度地图信息窗样式
+/*地图标题*/
+//导览页信息窗口样式
+.info-content {
+  width: 228px;
+  margin-top: 3px;
+  display: flex;
+  .right {
+    width: auto;
+    font-size: 13px;
+    .address {
+      line-height: 1.3;
+      width: 220px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .desc {
+      width: 220px;
+      word-break: break-all;
+      overflow: hidden;
+    }
+    button {
+      margin-top: 1px;
+      display: block;
+      width: 70%;
+      background-color: $theme;
+      font-size: $text-ss;
+      color: white;
+      line-height: $text-l;
+      padding: 2px;
+      border: none;
+      border-radius: 3px;
+    }
+  }
+  //img{
+  //  width: 60px;
+  //  height: 53px;
+  //}
+}
+
+.BMap_bubble_title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 12px;
+}
+
+.BMap_pop div:nth-child(1) div {
+  border-radius: 8px 0 0 0;
+}
+
+.BMap_pop div:nth-child(3) {
+  border-radius: 0 9px 0 0;
+  border-top: 1px solid #ababab;
+  border-right: 1px solid #ababab;
+  border-left: 1px solid white;
+  width: 23px !important;
+  height: 24px !important;
+  background-color: white;
+}
+
+.BMap_pop div:nth-child(3) div {
+  display: none;
+}
+
+.BMap_pop div:nth-child(5) div {
+  border-radius: 0 0 0 8px;
+}
+
+.BMap_pop div:nth-child(7) {
+  border-radius: 0 0 9px 0;
+  border-right: 1px solid #ababab;
+  border-bottom: 1px solid #ababab;
+  border-left: 1px solid white;
+  width: 23px !important;
+  height: 24px !important;
+  background-color: white;
+}
+
+.BMap_pop div:nth-child(7) div {
+  display: none;
+}

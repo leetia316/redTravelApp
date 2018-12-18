@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+    <title>red-travel-app</title>
+    <!-- 引入筑民生JS -->
+    <script>
+      // 识别筑民生APP内置浏览器内核标识
+      var ua = window.navigator.userAgent.toLowerCase();
+      if (ua.match(/dfhapp/)) {
+        var ua = navigator.userAgent.toLowerCase();
+        if (/iphone|ipad|ipod/.test(ua)) {
+          document.write('<script type="text\/javascript" charset="utf-8" src="http:\/\/m.scity.cn\/frame\/ios\/cordova.js"><\/script>');
+          document.write('<script type="text\/javascript" charset="utf-8" src="http:\/\/m.scity.cn\/frame\/ios\/js\/DCPlugin.js"><\/script>');
+          document.write('<script type="text\/javascript" charset="utf-8" src="http:\/\/m.scity.cn\/frame\/ios\/plugins\/barcodescanner.js"><\/script>');
+        } else if (/android/.test(ua)) {
+          document.write('<script type="text\/javascript" charset="utf-8" src="http:\/\/m.scity.cn\/frame\/android\/cordova.js"><\/script>');
+        }
+      }
+      //微信环境下移入JSSDK
+      if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+        document.write('<script type="text\/javascript" charset="utf-8" src="http:\/\/res.wx.qq.com\/open\/js\/jweixin-1.4.0.js"><\/script>');
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

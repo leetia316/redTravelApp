@@ -1,0 +1,102 @@
+// 颜色定义规范
+$theme:#ff6c6c;
+$theme-sub:rgb(240, 116, 107);
+$theme-background: #FFFFFF;
+$theme-background-sub: #eff4fa;
+
+$gray-back:#f3f3f3;//灰色字体的灰色背景
+
+$color-background-d: rgba(0, 0, 0, 0.3);
+$color-highlight-background: rgb(253, 108, 98);
+$color-dialog-background: rgb(204, 204, 204);
+$color-theme: rgb(216, 64, 54);
+$color-theme-l: rgb(241, 241, 241);
+$color-theme-g: rgb(219, 219, 219);
+$color-theme-d: rgba(19, 19, 19, 0.6);
+$color-sub-theme: rgb(240, 116, 107);
+
+$text-color: #3c3f41; //默认字体颜色
+$text-color-b: rgb(0,0,0);//加黑字体 标题等
+$text-color-g: #858586; //灰色字体
+$text-color-w: rgb(255, 255, 255); //白色字体
+
+$text-color-gg: rgb(206, 206, 206);
+$text-color-ggg: #c7c7c7;
+$text-color-wg: rgb(241, 241, 241);
+
+//字体定义规范
+$text-ss: 12px;
+$text-s: 13px;
+$text-m: 14px;
+$text-main:15px;
+$text: 16px; //游览器默认字体大小
+$text-l: 17px;
+$text-xl: 18px;
+$text-xxl: 20px;
+
+//
+@mixin scroll-container{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+@mixin scroll-div($bottom:0){
+  position: fixed;
+  top:0;
+  bottom: $bottom;
+  width: 100%;
+  overflow: hidden;
+}
+.scroll-container{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+// 背景图片
+@mixin bg-image($url) {
+  background-image: url($url + "@2x.png");
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+    background-image: url($url + "@3x.png");
+  }
+}
+
+
+
+// 不换行
+@mixin no-wrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// 扩展点击区域
+@mixin extend-click() {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+  }
+}
+
+// flex垂直居中
+@mixin vertical-container{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.vertical-container{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+

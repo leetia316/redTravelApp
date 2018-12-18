@@ -1,0 +1,103 @@
+.spot-content{
+  padding: 10px 0;
+  letter-spacing: 1px;
+  line-height:1.6;
+  text-align: center;
+  img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  p{
+    text-indent: 23px!important;
+    text-align: left;
+  }
+}
+.activity-content {
+  padding: 12px 0;
+  p {
+    letter-spacing: 1px;
+    text-indent: 28px;
+    line-height: 1.4;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    max-height: 300px;
+    margin: 15px 0;
+    border-radius: 5px;
+  }
+}
+.date {
+  letter-spacing: 1px;
+}
+.no-search-result-p{
+  text-align: center;
+  font-size: $text-xl;
+  color:$text-color-g;
+  padding: 30px 0 30px 0;
+  i{
+    position: relative;
+    margin-right: 10px;
+    top:3px;
+  }
+}
+.page-container {
+  background: $theme-background-sub;
+  height: 100%;
+}
+
+//看过 图标和数字
+.article-hasRead {
+  display: flex;
+  align-items: center;
+  i {
+    margin-right: 5px;
+  }
+}
+
+.weather-icon {
+  /* 通过设置 font-size 来改变图标大小 */
+  width: 70px;
+  height: 70px;
+  /* 图标和文字相邻时，垂直对齐 */
+  vertical-align: -0.15em;
+  /* 通过设置 color 来改变 SVG 的颜色/fill */
+  fill: currentColor;
+  /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+     normalize.css 中也包含这行 */
+  overflow: hidden;
+}
+
+.middle-text-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color:$text-color-g;
+  font-size: $text-main;
+  span{
+    padding: 0 10px;
+  }
+  div{
+    flex-grow:1;
+  }
+}
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all .2s ease-in-out;
+}
+
+.slide-fade-leave-to {
+  //transform: translateY(-30px);
+  opacity: 0;
+}
+
+.slide-fade-enter {
+  /* .slide-fade-leave-active for below version 2.1.8 */
+  //transform: translateY(30px);
+  opacity: 1;
+}
