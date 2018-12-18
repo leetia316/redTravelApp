@@ -136,7 +136,7 @@ const handleIfLogin = (api,data) =>{
 
 export const wechatLogin = (menuName,callBack) => {
   //跳转到微信登录授权
-  let appId = 'wx12f354f4670e6574';
+  let appId = 'wx12f354f4670e6574';  //'wx390628594388f127'
   let url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + appId +
     "&redirect_uri=" + location.href/*.replace("localhost","127.0.0.1") */+
     "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
