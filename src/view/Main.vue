@@ -38,7 +38,7 @@
     },
     mounted() {
       let ua = window.navigator.userAgent.toLowerCase();
-      if(ua.match(/MicroMessenger/i) == 'micromessenger'){   //微信环境下去掉顶部栏
+      if(ua.match(/MicroMessenger/i) == 'micromessenger'){   //微信环境下需要去掉顶部栏
         this.$refs.centerDiv.style.bottom = "5px";
       }
     },
